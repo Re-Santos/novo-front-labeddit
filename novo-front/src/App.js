@@ -1,15 +1,15 @@
-import './App.css';
+import { ThemeProvider } from '@mui/material'
+import Router from './routes/Router'
+import theme from './constants/theme'
+import { GlobalStyle } from './styled'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Labeddit
-        </p>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={theme}>
+      <GlobalStyle/>
+      <Router/>
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
