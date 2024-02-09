@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         width: 100%;
         min-height: 100vh;
-        background-color: #F5F5F5;
+        background-color: white;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 `

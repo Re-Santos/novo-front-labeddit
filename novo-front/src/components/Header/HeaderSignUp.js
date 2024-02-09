@@ -1,7 +1,7 @@
 import * as React from 'react'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
-import { HeaderBox, StyledToolBar, Img } from './styled'
+import { HeaderBox, StyledToolBar, Img, StyledButton } from './styled'
 import Button from '@mui/material/Button'
 import { goToPostListPage, goToLoginPage } from '../../routes/coordinator'
 import { useNavigate } from 'react-router-dom'
@@ -17,9 +17,8 @@ const HeaderSignUp = () => {
           <StyledToolBar>
             <Button onClick={() => goToPostListPage(navigate)} variant="h6" component="div"> 
               <Img src={Logo}/>
-              LabEddit 
             </Button>
-            <Button onClick={() => goToLoginPage(navigate)} color="inherit">Entrar</Button>
+            <StyledButton onClick={() => goToLoginPage(navigate)} color="inherit">Entrar</StyledButton>
           </StyledToolBar>
         </AppBar>
       </Box>
