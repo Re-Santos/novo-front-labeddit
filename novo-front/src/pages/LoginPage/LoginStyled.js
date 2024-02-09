@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Button from '@mui/material/Button';
 
 export const LogoLogin = styled.img`
-    margin-top:120px;
     height: 150px;
     width: 150px;
     @media (min-width: 720px) {
@@ -21,14 +20,14 @@ export const Title = styled.div`
         margin: 0;
         padding: 0;
         margin: 10px 0 0 0;
-        color: #887ED8;
+        color:#EDEDED;
         @media (min-width: 720px) {
         font-size: 40px;
         }
     }
     p {
         margin: 10px 0 0 0;
-        margin-bottom:80px;
+        margin-bottom:30px;
         padding: 0;
         color:#2c2c2c ;
         @media (min-width: 720px) {
@@ -69,7 +68,7 @@ export const ContaButton =styled(Button)`
 
 `;
 export const FooterLineImageContainer = styled.div`
-  margin-top: 120px;
+  margin-top: 60px;
   display: flex;
   align-items: center;
   justify-content: center;

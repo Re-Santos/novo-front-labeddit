@@ -23,7 +23,6 @@ const Header = () => {
           <StyledToolBar>
             <Button onClick={() => goToPostListPage(navigate)} variant="h6" component="div">
               <Img src={Logo}/>
-              LabEddit
             </Button>
             <Button onClick={logout} color="inherit">Logout</Button>
           </StyledToolBar>

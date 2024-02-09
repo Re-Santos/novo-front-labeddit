@@ -1,4 +1,4 @@
-export const primaryColor = '#887ED8';
+export const primaryColor = '#EDEDED';
 
 export const secondColor = '#F2825F';
 
