@@ -1,11 +1,10 @@
 import { Grid } from '@mui/material'
 import TextField from '@mui/material/TextField'
 import useForm from '../../hooks/useForm'
-import Button from '@mui/material/Button'
-import SendIcon from '@mui/icons-material/Send'
 import { useNavigate } from 'react-router-dom'
 import { login } from '../../services/user'
 import useUnprotectedPage from '../../hooks/useUnprotectedPage'
+import { GradientButton } from './LoginStyled'
 
 const LoginForm = () => {
   const [ form, onChange, clear ] = useForm({email:'', password:''})
@@ -55,14 +54,13 @@ const LoginForm = () => {
               pl={5}
               pr={5}
               pb={1}>
-              <Button 
+              <GradientButton 
                 type={'submit'}
                 variant="contained" 
-                endIcon={<SendIcon />}
                 fullWidth
                 size="large">
                 Continuar
-              </Button>
+              </GradientButton>
             </Grid>
         </form>
     )
