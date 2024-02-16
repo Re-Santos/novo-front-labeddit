@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://labeddit-temporaria';
+export const BASE_URL = 'https://labeddit-o4al.onrender.com';

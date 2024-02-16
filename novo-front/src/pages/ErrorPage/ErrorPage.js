@@ -1,4 +1,4 @@
-import Logo from '../../assets/images/main-logo.png'
+import Logo from '../../assets/main-logo.svg'
 import { DivError, Img } from './styled'
 import { Grid } from '@mui/material'
 import Button from '@mui/material/Button'
