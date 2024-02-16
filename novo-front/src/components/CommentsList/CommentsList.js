@@ -1,7 +1,6 @@
 import { Posts, EnviadoPor, Texto, DivEngajamento, DivBottom, Carregando } from './styled'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward'
-import CircularProgress from '@mui/material/CircularProgress'
 import { createCommentVote, changeCommentVote, deleteCommentVote } from '../../services/votes'
 import { arrowUpColorComment, arrowDownColorComment } from '../../helpers/arrowHelper'
 

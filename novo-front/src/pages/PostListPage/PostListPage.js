@@ -1,15 +1,11 @@
-// import Header from '../../components/Header/Header'
-// import PostArea from '../../components/PostArea/PostArea'
-import Header from '../../components/Header/Header';
-
+import Header from '../../components/Header/Header'
+import PostArea from '../../components/PostArea/PostArea'
 import PostList from '../../components/PostList/PostList'
 import Container from '@mui/material/Container'
 import useProtectedPage from '../../hooks/useProtectedPage'
 import { useEffect, useState } from 'react'
 import { BASE_URL } from '../../constants/urls'
 import axios from 'axios'
-import { Posts } from '../../components/PostList/styled'
-import { Style } from '@mui/icons-material';
 
 const PostListPage = () => {
   useProtectedPage();
@@ -42,13 +38,13 @@ const PostListPage = () => {
   },[]);
     
     return (
-        <>
-            <Header/>
-            <Container Style={{ maxWidth: 'md' }}>
-            <PostArea newPost={updatePostList} />
-            <PostList Posts={postList} sendVote={updatePostList} />
-            </Container>
-        </>
+      <>
+        <Header/>
+        <Container maxWidth='md'>
+          <PostArea newPost={updatePostList}/>
+          <PostList posts={postList} sendVote={updatePostList}/>
+        </Container>
+      </>
     );
   };
   

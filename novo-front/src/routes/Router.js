@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import LoginPage from "../pages/LoginPage/LoginPage"
-import PostDetailPage from '../pages/PostDetailPage/PostDetailPage'
-import PostListPage from '../pages/PostListPage/PostListPage'
+// import PostListPage from '../pages/PostListPage/PostListPage'
 import SignUpPage from '../pages/SignUpPage/SignUpPage'
 import ErrorPage from '../pages/ErrorPage/ErrorPage'
+import PostDetailPage from "../pages/PostDetailPage/PostDetailPage"
+import PostListPage from "../pages/PostListPage/PostListPage"
 
 const Router = () => {
     return(
