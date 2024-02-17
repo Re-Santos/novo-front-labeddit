@@ -1,1 +1,0 @@
-# projeto-fullStack-front

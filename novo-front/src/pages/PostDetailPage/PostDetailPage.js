@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Container from '@mui/material/Container';
 import Header from '../../components/Header/Header';
-import PostDetail from '../../components/PostDetail/PostDetail'; // Verifique se o caminho está correto
+import PostDetail from '../../components/PostDetail/PostDetail'; 
 import Comments from '../../components/Comments/Comments';
 import CommentsList from '../../components/CommentsList/CommentsList';
 import useProtectedPage from '../../hooks/useProtectedPage';
