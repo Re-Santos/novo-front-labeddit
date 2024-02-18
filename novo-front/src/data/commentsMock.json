@@ -1,0 +1,11 @@
+
+[
+    {
+      "id": 1,
+      "username": "UsuárioExemplo",
+      "body": "Este é um comentário de exemplo",
+      "userVote": null,
+      "voteSum": 0
+    }
+  ]
+  

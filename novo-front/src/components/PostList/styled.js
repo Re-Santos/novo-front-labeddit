@@ -4,7 +4,7 @@ export const Posts = styled.div`
     margin-top: 30px;
     margin-left: 20px;
     margin-right: 20px;
-    background-color: #E9E561;
+    background-color: #E0E0E0;
     height: auto;  
     border-radius: 5px;
     padding-bottom: 5px;

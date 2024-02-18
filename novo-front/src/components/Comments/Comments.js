@@ -1,8 +1,7 @@
 import Box from '@mui/material/Box'
 import TextField from '@mui/material/TextField'
-import { PostField } from './styled'
+import { GradientButton, PostField } from './styled'
 import { Grid } from '@mui/material'
-import Button from '@mui/material/Button'
 import useForm from '../../hooks/useForm'
 import { useNavigate, useParams, useLocation } from 'react-router-dom'
 import { sendComment } from '../../services/comment'
@@ -25,7 +24,8 @@ const Comments = (props) => {
           <form onSubmit={onSubmitComment}>
             <Box
               sx={{
-                maxWidth: '100%'
+                maxWidth: '100%',
+                backgroundColor: '#EDEDED', 
               }}
             >
               <TextField 
@@ -44,14 +44,14 @@ const Comments = (props) => {
               pb={2}
               pt={2}
             >
-              <Button 
+              <GradientButton 
                 variant="contained" 
                 fullWidth
                 size="large"
                 type='submit'
               >
                 Comentar
-              </Button>
+              </GradientButton>
             </Grid>
           </form>
         </PostField>

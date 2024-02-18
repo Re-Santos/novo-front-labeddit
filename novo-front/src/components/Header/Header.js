@@ -5,10 +5,11 @@ import Button from '@mui/material/Button'
 import { goToPostListPage, goToLoginPage } from '../../routes/coordinator'
 import { useNavigate } from 'react-router-dom'
 import Logo from '../../assets/header-logo.svg'
-import { HeaderBox, Img, StyledToolBar } from './styled'
+import { HeaderBox, Img, StyledButton, StyledToolBar } from './styled'
 
 const Header = () => {
   const navigate = useNavigate()
+  // eslint-disable-next-line
   const token = localStorage.getItem('token')
 
   const logout = () => {
@@ -24,7 +25,7 @@ const Header = () => {
             <Button onClick={() => goToPostListPage(navigate)} variant="h6" component="div">
               <Img src={Logo}/>
             </Button>
-            <Button onClick={logout} color="inherit">Logout</Button>
+            <StyledButton  onClick={logout} color="inherit">Logout</StyledButton>
           </StyledToolBar>
         </AppBar>
       </Box>

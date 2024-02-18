@@ -3,8 +3,12 @@ import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward'
 import { createCommentVote, changeCommentVote, deleteCommentVote } from '../../services/votes'
 import { arrowUpColorComment, arrowDownColorComment } from '../../helpers/arrowHelper'
+import mockComments from '../../data/commentsMock.json';
 
 const CommentsList = (props) => {
+     // Vai os dados reais se disponíveis, caso contrário, usará dados de exemplo (Renata)
+    const commentsToMap = props.listaComentario || mockComments;
+
     const updateVote = (voto, id, uservote) => {
         if(uservote === null) {
             createCommentVote(id, voto)
@@ -33,7 +37,9 @@ const CommentsList = (props) => {
         console.log(voto, id, uservote)
     }
 
-    const commentCards = props.listaComentario.map((comment) => {
+    // const commentCards = props.listaComentario.map((comment) => {
+    // Utilizei commentsToMap no código abaixo, enquanto não ajustei erro de posts na api(Renata)
+    const commentCards = commentsToMap.map((comment) => {
         return(
             <Posts key={comment.id}>
                 <EnviadoPor>Enviado por: {comment.username}</EnviadoPor>

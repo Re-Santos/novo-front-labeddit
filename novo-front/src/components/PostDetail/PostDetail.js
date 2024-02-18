@@ -7,7 +7,7 @@ import { useParams, useLocation } from 'react-router-dom'
 const PostDetail = () => {
     const params = useParams()
     const { state } = useLocation()
-    console.log(params, state, 'foi agora foi')
+    console.log(params, state, 'Tudo certo')
 
     return(
         <>

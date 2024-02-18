@@ -10,6 +10,6 @@ export const neutralColor = '#F5F5F5';
 
 export const darkerNeutralColor = '#786C5E';
 
-export const lightOrange = '#fcc4b3';
+export const lightOrange = '#4F4F4F';
 
 export const negativeColor = '#f9410e'

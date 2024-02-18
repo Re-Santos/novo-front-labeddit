@@ -1,8 +1,7 @@
 import Box from '@mui/material/Box'
 import TextField from '@mui/material/TextField'
-import { PostField } from './styled'
+import { GradientButton, PostField } from './styled'
 import { Grid } from '@mui/material'
-import Button from '@mui/material/Button'
 import { sendPost } from '../../services/post'
 import { useNavigate } from 'react-router-dom'
 import useForm from '../../hooks/useForm'
@@ -23,7 +22,8 @@ const PostArea = (props) => {
           <form onSubmit={onSubmitPost}>
             <Box
               sx={{
-                maxWidth: '100%'
+                maxWidth: '100%',
+                backgroundColor: '#EDEDED', 
               }}
             >
               <TextField 
@@ -43,14 +43,14 @@ const PostArea = (props) => {
               pb={2}
               pt={2}
             >
-              <Button 
+              <GradientButton 
                 variant="contained" 
                 fullWidth
                 size="large"
                 type={'submit'}
               >
                 Postar
-              </Button>
+              </GradientButton>
             </Grid>
           </form>
         </PostField>
