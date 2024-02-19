@@ -12,7 +12,7 @@ Este é o repositório do front-end do projeto LabEddit, o último projeto do cu
 https://drive.google.com/file/d/1S_oGx8KWJo3AU7a_Ox39CtxaPR-rdszl/view?usp=drive_link<br>
 <h2>Links de acesso</h2>
 <h3>Deploy:</h3>
-projeto-labeddit-renata.surge.sh
+https://projeto-labeddit-renata.surge.sh
 <h3>LabEddit Back-End:</h3>
 https://github.com/Re-Santos/rede-social-back-end
 
