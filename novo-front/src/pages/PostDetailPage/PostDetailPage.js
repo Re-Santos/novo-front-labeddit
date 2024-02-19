@@ -8,11 +8,14 @@ import Comments from '../../components/Comments/Comments';
 import CommentsList from '../../components/CommentsList/CommentsList';
 import useProtectedPage from '../../hooks/useProtectedPage';
 // import { BASE_URL } from '../../constants/urls';
-import postData from '../../data/postDetails.json';  // Importa os dados para usar mockup
+import postDetails from '../../data/postDetails.json';
+
 
 const PostDetailPage = () => {
   
   const params = useParams();
+
+  const [postData, setPostData] = useState(postDetails);//adicionei para usar os mockups(Renata)
 
   const [comments, setComments] = useState([]);
 
@@ -33,7 +36,7 @@ const PostDetailPage = () => {
 
     // Use os dados locais em vez da chamada da API
     setComments(postData.comments);
-  }, []); //removi params.id do array de depêndências, pq não estou usando a api e sim o mockup(Renata)
+  }, [postData]); //removi params.id do array de depêndências, pq não estou usando a api e sim o mockup(Renata)
 
   useEffect(() => {
     getComments();
