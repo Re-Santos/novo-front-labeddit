@@ -12,6 +12,7 @@ Este é o repositório do front-end do projeto LabEddit, o último projeto do cu
 https://drive.google.com/file/d/1S_oGx8KWJo3AU7a_Ox39CtxaPR-rdszl/view?usp=drive_link<br>
 <h2>Links de acesso</h2>
 <h3>Deploy:</h3>
+projeto-labeddit-renata.surge.sh
 <h3>LabEddit Back-End:</h3>
 https://github.com/Re-Santos/rede-social-back-end
 
@@ -23,6 +24,7 @@ O LabEddit é uma aplicação de interação social, onde os usuários podem cri
 Axios<br>
 React<br>
 ReactJS: Biblioteca JavaScript para construção da interface do usuário.<br>
+Material-UI<br>
 Figma: Design utilizado como referência para o layout.<br>
 Outras dependências: Listadas no arquivo package.json.<br>
 
@@ -31,5 +33,8 @@ Outras dependências: Listadas no arquivo package.json.<br>
 2. No diretório do projeto, execute o comando npm install para instalar as dependências.<br>
 3. Execute o comando npm start para iniciar o servidor local.
 
-
+<h2> Dependências </h2>
+@mui/material - Biblioteca Material-UI para componentes React.<br>
+@emotion/react - Emotion React, necessário para o Material-UI.<br>
+@emotion/styled - Emotion Styled, necessário para o Material-UI.<br>
 
