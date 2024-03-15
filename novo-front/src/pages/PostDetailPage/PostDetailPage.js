@@ -1,43 +1,51 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
-// import axios from 'axios';
+import axios from 'axios';
 import Container from '@mui/material/Container';
 import Header from '../../components/Header/Header';
 import PostDetail from '../../components/PostDetail/PostDetail';
 import Comments from '../../components/Comments/Comments';
 import CommentsList from '../../components/CommentsList/CommentsList';
 import useProtectedPage from '../../hooks/useProtectedPage';
-// import { BASE_URL } from '../../constants/urls';
-import postData from '../../data/postDetails.json';  // Importa os dados para usar mockup
+import { BASE_URL } from '../../constants/urls'; 
 
 const PostDetailPage = () => {
-  
   const params = useParams();
-
+  const [postData, setPostData] = useState({}); 
   const [comments, setComments] = useState([]);
 
   const getComments = useCallback(() => {
-    // alterei para usar mockup, enquanto não corrigi erro de post na api(Renata)
-    //   .get(`${BASE_URL}/posts/${params.id}/comments`, {
-    //     headers: {
-    //       Authorization: localStorage.getItem('token'),
-    //     },
-    //   })
-    //   .then((success) => {
-    //     setComments(success.data);
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //     alert('Ocorreu um erro, tente novamente');
-    //   });
-
-    // Use os dados locais em vez da chamada da API
-    setComments(postData.comments);
-  }, []); //removi params.id do array de depêndências, pq não estou usando a api e sim o mockup(Renata)
+    axios
+      .get(`${BASE_URL}/posts/${params.id}/comments`, {
+        headers: {
+          Authorization: localStorage.getItem('token'),
+        },
+      })
+      .then((response) => {
+        setComments(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+        alert('Ocorreu um erro, tente novamente');
+      });
+  }, [params.id]); // Adicione params.id ao array de dependências
 
   useEffect(() => {
+    axios
+      .get(`${BASE_URL}/posts/${params.id}`, {
+        headers: {
+          Authorization: localStorage.getItem('token'),
+        },
+      })
+      .then((response) => {
+        setPostData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+        alert('Ocorreu um erro, tente novamente');
+      });
     getComments();
-  }, [getComments]);
+  }, [params.id, getComments]);
 
   const atualizaListaComentarios = useCallback(() => {
     setTimeout(() => {
@@ -51,7 +59,7 @@ const PostDetailPage = () => {
     <>
       <Header />
       <Container maxWidth="md">
-        <PostDetail />
+        <PostDetail post={postData} /> 
         <Comments enviaComentario={atualizaListaComentarios} />
         <CommentsList listaComentario={comments} sendVote={atualizaListaComentarios} />
       </Container>

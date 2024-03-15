@@ -6,7 +6,7 @@ import { arrowUpColorComment, arrowDownColorComment } from '../../helpers/arrowH
 import mockComments from '../../data/commentsMock.json';
 
 const CommentsList = (props) => {
-     // Vai os dados reais se disponíveis, caso contrário, usará dados de exemplo (Renata)
+     // Vai usar dados reais se disponíveis, caso contrário, usará dados de exemplo (Renata)
     const commentsToMap = props.listaComentario || mockComments;
 
     const updateVote = (voto, id, uservote) => {
