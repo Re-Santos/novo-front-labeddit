@@ -14,7 +14,7 @@ const PostArea = (props) => {
   const onSubmitPost = (event) => {
     event.preventDefault()
     sendPost(form, clear, navigate)
-    props.newPost()
+    props.newPost(form); //(aqui estamos passando os dados do novo post para a função newPost)
 };
 
     return (
