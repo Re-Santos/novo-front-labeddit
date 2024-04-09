@@ -11,6 +11,7 @@ const PostListPage = () => {
   useProtectedPage();
 
   const [postList, setPostList] = useState([]);
+  const [usersList, setUsersList] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const getPostList = () => {
@@ -24,6 +25,7 @@ const PostListPage = () => {
     })
     .then((response) => {
       setPostList(response.data);
+      setUsersList(response.data.map(post => post.userId)); // Obtém a lista de usuários dos posts
       setLoading(false);
     })
     .catch((error) => {
@@ -49,7 +51,7 @@ const PostListPage = () => {
         {loading ? (
           <div>Carregando...</div>
         ) : (
-          <PostList posts={postList} />
+          <PostList posts={postList} usersList={usersList} /> 
         )}
       </Container>
     </>
