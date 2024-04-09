@@ -4,12 +4,15 @@
 Este é o repositório do front-end do projeto LabEddit, o último projeto do curso. Aqui você encontrará informações sobre o desenvolvimento, configuração e deploy do front-end.<br>
 <h2>Telas:</h2><br>
 
-![image](https://github.com/Re-Santos/projeto-fullStack-front/assets/123095086/b5715d8d-50d3-4d17-b4df-ca9cf2025110)
----![image](https://github.com/Re-Santos/projeto-fullStack-front/assets/123095086/30d17c59-75c8-40d1-9dfb-903272771a5b)
----![image](https://github.com/Re-Santos/projeto-fullStack-front/assets/123095086/eb7999f4-9900-45c6-893e-3ed1cf2bd895)---![image](https://github.com/Re-Santos/projeto-fullStack-front/assets/123095086/b225b98d-0bd0-40ee-8809-7f6d31a6cf39)
+![image](https://github.com/Re-Santos/projeto-fullStack-front/assets/123095086/cff92709-5dd0-4286-ab00-c249543f1e9d)
+![image](https://github.com/Re-Santos/projeto-fullStack-front/assets/123095086/a7c6faff-9093-4d19-b1e8-e7a3a1ea05b4)
+![image](https://github.com/Re-Santos/projeto-fullStack-front/assets/123095086/284a9ef3-3ed7-47cf-a596-6079e0383f91)
+![image](https://github.com/Re-Santos/projeto-fullStack-front/assets/123095086/35e02407-daed-461d-9a10-3144fe21db62)
+![image](https://github.com/Re-Santos/projeto-fullStack-front/assets/123095086/287e9bb5-8e45-4fca-9960-29462bc145ff)
 
 <h2>Vídeo:</h2><br>
-https://drive.google.com/file/d/1S_oGx8KWJo3AU7a_Ox39CtxaPR-rdszl/view?usp=drive_link<br>
+https://drive.google.com/uc?id=1Tjns0D1_7finpeVVNO8-dWzQjc_APQnq&export=download
+
 <h2>Links de acesso</h2>
 <h3>Deploy:</h3>
 https://projeto-labeddit-renata.surge.sh
