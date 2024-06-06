@@ -7,19 +7,19 @@ const useRequestData = (initialData, url) => {
     useEffect(() => {
         axios.get(url, {
             headers: {
-                Authorization: localStorage.getItem('token')
+                Authorization: `Bearer ${localStorage.getItem('token')}`
             }
         })
-        .then((sucess) => {
-            setData(sucess.data)
-        })
-        .catch((error) => {
-            console.log(error)
-            alert('Ocorreu um erro, tente novamente')
-        })
+            .then((sucess) => {
+                setData(sucess.data)
+            })
+            .catch((error) => {
+                console.log(error)
+                alert('Ocorreu um erro, tente novamente')
+            })
     }, [url])
 
-    return(data)
+    return (data)
 };
 
 export default useRequestData

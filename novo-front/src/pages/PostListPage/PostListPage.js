@@ -16,27 +16,38 @@ const PostListPage = () => {
 
   const getPostList = () => {
     const token = localStorage.getItem('token');
-    console.log('Token:', token); 
-    
+    console.log('Token:', token);
+
     axios.get(`${BASE_URL}/posts`, {
       headers: {
         Authorization: `Bearer ${token}`
       }
     })
-    .then((response) => {
-      setPostList(response.data);
-      setUsersList(response.data.map(post => post.userId)); // Obtém a lista de usuários dos posts
-      setLoading(false);
-    })
-    .catch((error) => {
-      console.error('Error fetching posts:', error);
-      alert('Ocorreu um erro ao buscar os posts. Por favor, tente novamente mais tarde.');
-      setLoading(false);
-    });
+      .then((response) => {
+        setPostList(response.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error fetching posts:', error);
+        alert('Ocorreu um erro ao buscar os posts. Por favor, tente novamente mais tarde.');
+        setLoading(false);
+      });
+  };
+
+  const getUserList = () => {
+    axios.get(`${BASE_URL}/users/all`)
+      .then((response) => {
+        setUsersList(response.data.users)
+      })
+      .catch((error) => {
+        console.error('Error fetching posts:', error);
+        alert('Ocorreu um erro ao buscar os usuários. Por favor, tente novamente mais tarde.');
+      });
   };
 
   useEffect(() => {
     getPostList();
+    getUserList()
   }, []);
 
   const handleNewPost = (newPostData) => {
@@ -51,7 +62,7 @@ const PostListPage = () => {
         {loading ? (
           <div>Carregando...</div>
         ) : (
-          <PostList posts={postList} usersList={usersList} /> 
+          <PostList posts={postList} usersList={usersList} />
         )}
       </Container>
     </>

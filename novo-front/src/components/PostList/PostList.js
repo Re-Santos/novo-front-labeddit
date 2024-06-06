@@ -80,7 +80,6 @@ export default PostList;
 // Função para obter o nome de usuário pelo ID
 const getUsernameById = (userId, usersList) => {
     if (!userId || !usersList || usersList.length === 0) return 'Usuário Desconhecido';
-  
     const user = usersList.find(user => user.id === userId);
     return user ? user.username : 'Usuário Desconhecido';
   };

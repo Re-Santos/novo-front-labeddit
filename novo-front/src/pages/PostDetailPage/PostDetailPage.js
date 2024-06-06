@@ -7,18 +7,18 @@ import PostDetail from '../../components/PostDetail/PostDetail';
 import Comments from '../../components/Comments/Comments';
 import CommentsList from '../../components/CommentsList/CommentsList';
 import useProtectedPage from '../../hooks/useProtectedPage';
-import { BASE_URL } from '../../constants/urls'; 
+import { BASE_URL } from '../../constants/urls';
 
 const PostDetailPage = () => {
   const params = useParams();
-  const [postData, setPostData] = useState({}); 
+  const [postData, setPostData] = useState({});
   const [comments, setComments] = useState([]);
 
   const getComments = useCallback(() => {
     axios
       .get(`${BASE_URL}/posts/${params.id}/comments`, {
         headers: {
-          Authorization: localStorage.getItem('token'),
+          Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
       })
       .then((response) => {
@@ -34,7 +34,7 @@ const PostDetailPage = () => {
     axios
       .get(`${BASE_URL}/posts/${params.id}`, {
         headers: {
-          Authorization: localStorage.getItem('token'),
+          Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
       })
       .then((response) => {
@@ -59,7 +59,7 @@ const PostDetailPage = () => {
     <>
       <Header />
       <Container maxWidth="md">
-        <PostDetail post={postData} /> 
+        <PostDetail post={postData} />
         <Comments enviaComentario={atualizaListaComentarios} />
         <CommentsList listaComentario={comments} sendVote={atualizaListaComentarios} />
       </Container>

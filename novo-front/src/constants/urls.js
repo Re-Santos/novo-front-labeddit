@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://rede-social-back-end.onrender.com';
+export const BASE_URL = 'https://labeddit-o4al.onrender.com';

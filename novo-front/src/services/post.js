@@ -11,7 +11,7 @@ export const sendPost = (body, clear, navigate) => {
   axios
     .post(`${BASE_URL}/posts`, bodyPayload, {
       headers: {
-        Authorization: localStorage.getItem('token'),
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     })
     .then((success) => {

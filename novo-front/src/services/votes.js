@@ -7,15 +7,15 @@ export const createPostVote = (id, num) => {
     }
     axios.post(`${BASE_URL}/posts/${id}/votes`, body, {
         headers: {
-            Authorization: localStorage.getItem('token')
+            Authorization: `Bearer ${localStorage.getItem('token')}`
         }
     })
-    .then((sucess) => {
-        console.log(sucess.sucess)
-    })
-    .catch((error) => {
-        console.log(error)
-    })
+        .then((sucess) => {
+            console.log(sucess.sucess)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
 }
 
 export const changePostVote = (id, num) => {
@@ -24,29 +24,29 @@ export const changePostVote = (id, num) => {
     }
     axios.put(`${BASE_URL}/posts/${id}/votes`, body, {
         headers: {
-            Authorization: localStorage.getItem('token')
+            Authorization: `Bearer ${localStorage.getItem('token')}`
         }
     })
-    .then((sucess) => {
-        console.log(sucess.sucess)
-    })
-    .catch((error) => {
-        console.log(error)
-    })
+        .then((sucess) => {
+            console.log(sucess.sucess)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
 }
 
 export const deletePostVote = (id) => {
     axios.delete(`${BASE_URL}/posts/${id}/votes`, {
         headers: {
-            Authorization: localStorage.getItem('token')
+            Authorization: `Bearer ${localStorage.getItem('token')}`
         }
     })
-    .then((sucess) => {
-        console.log(sucess.sucess)
-    })
-    .catch((error) => {
-        console.log(error)
-    })
+        .then((sucess) => {
+            console.log(sucess.sucess)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
 }
 
 export const createCommentVote = (id, num) => {
@@ -55,15 +55,15 @@ export const createCommentVote = (id, num) => {
     }
     axios.post(`${BASE_URL}/comments/${id}/votes`, body, {
         headers: {
-            Authorization: localStorage.getItem('token')
+            Authorization: `Bearer ${localStorage.getItem('token')}`
         }
     })
-    .then((sucess) => {
-        console.log(sucess.sucess)
-    })
-    .catch((error) => {
-        console.log(error)
-    })
+        .then((sucess) => {
+            console.log(sucess.sucess)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
 }
 
 export const changeCommentVote = (id, num) => {
@@ -72,27 +72,27 @@ export const changeCommentVote = (id, num) => {
     }
     axios.put(`${BASE_URL}/comments/${id}/votes`, body, {
         headers: {
-            Authorization: localStorage.getItem('token')
+            Authorization: `Bearer ${localStorage.getItem('token')}`
         }
     })
-    .then((sucess) => {
-        console.log(sucess.sucess)
-    })
-    .catch((error) => {
-        console.log(error)
-    })
+        .then((sucess) => {
+            console.log(sucess.sucess)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
 }
 
 export const deleteCommentVote = (id) => {
     axios.delete(`${BASE_URL}/comments/${id}/votes`, {
         headers: {
-            Authorization: localStorage.getItem('token')
+            Authorization: `Bearer ${localStorage.getItem('token')}`
         }
     })
-    .then((sucess) => {
-        console.log(sucess.sucess)
-    })
-    .catch((error) => {
-        console.log(error)
-    })
+        .then((sucess) => {
+            console.log(sucess.sucess)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
 }
