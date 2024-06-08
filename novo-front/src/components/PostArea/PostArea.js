@@ -12,6 +12,7 @@ const PostArea = (props) => {
         event.preventDefault();
         try {
             const newPost = await sendPost(form, clear);
+            console.log('Novo post criado:', newPost);
             props.newPost(newPost);
         } catch (error) {
             console.error('Erro ao postar:', error);

@@ -23,26 +23,26 @@ const PostListPage = () => {
                 Authorization: `Bearer ${token}`
             }
         })
-            .then((response) => {
-                setPostList(response.data.reverse()); // Inverter a ordem dos posts para exibir o mais recente no topo
-                setLoading(false);
-            })
-            .catch((error) => {
-                console.error('Erro ao buscar posts:', error);
-                alert('Ocorreu um erro ao buscar os posts. Por favor, tente novamente mais tarde.');
-                setLoading(false);
-            });
+        .then((response) => {
+            setPostList(response.data.reverse()); // Inverte a ordem dos posts para exibir o mais recente no topo
+            setLoading(false);
+        })
+        .catch((error) => {
+            console.error('Erro ao buscar posts:', error);
+            alert('Ocorreu um erro ao buscar os posts. Por favor, tente novamente mais tarde.');
+            setLoading(false);
+        });
     };
 
     const getUserList = () => {
         axios.get(`${BASE_URL}/users/all`)
-            .then((response) => {
-                setUsersList(response.data.users);
-            })
-            .catch((error) => {
-                console.error('Erro ao buscar usuários:', error);
-                alert('Ocorreu um erro ao buscar os usuários. Por favor, tente novamente mais tarde.');
-            });
+        .then((response) => {
+            setUsersList(response.data.users);
+        })
+        .catch((error) => {
+            console.error('Erro ao buscar usuários:', error);
+            alert('Ocorreu um erro ao buscar os usuários. Por favor, tente novamente mais tarde.');
+        });
     };
 
     useEffect(() => {
@@ -51,6 +51,7 @@ const PostListPage = () => {
     }, []);
 
     const handleNewPost = (newPostData) => {
+        console.log('Adicionando novo post:', newPostData);
         setPostList(prevPostList => [newPostData, ...prevPostList]);
     };
 
