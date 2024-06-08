@@ -1,24 +1,33 @@
 import axios from 'axios';
 import { BASE_URL } from '../constants/urls';
-import { goToPostListPage } from '../routes/coordinator';
 
-export const sendPost = (body, clear, navigate) => {
-  const bodyPayload = {
-    name: localStorage.getItem('username'),
-    content: body.body,
-  };
+export const sendPost = (body, clear) => {
+    const bodyPayload = {
+        name: localStorage.getItem('username'),
+        content: body.body,
+    };
 
-  axios
-    .post(`${BASE_URL}/posts`, bodyPayload, {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem('token')}`,
-      },
-    })
-    .then((success) => {
-      clear();
-      goToPostListPage(navigate);
-    })
-    .catch((error) => {
-      alert(error.response.data.message);
-    });
+    return axios
+        .post(`${BASE_URL}/posts`, bodyPayload, {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`,
+            },
+        })
+        .then((response) => {
+            clear();
+            const postData = response.data.post;
+            return {
+                id: postData.id,
+                content: postData.content,
+                userId: localStorage.getItem('userId'), 
+                userVote: null,
+                likes: 0,
+                comment: 0,
+            };
+        })
+        .catch((error) => {
+            console.error('Erro ao criar post:', error);
+            alert(error.response.data.message);
+            throw error;
+        });
 };
