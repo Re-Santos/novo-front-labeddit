@@ -11,7 +11,7 @@ Este é o repositório do front-end do projeto LabEddit, o último projeto do cu
 ![image](https://github.com/Re-Santos/projeto-fullStack-front/assets/123095086/287e9bb5-8e45-4fca-9960-29462bc145ff)
 
 <h2>Vídeo:</h2><br>
-https://drive.google.com/uc?id=1Tjns0D1_7finpeVVNO8-dWzQjc_APQnq&export=download
+https://drive.google.com/file/d/1v7r0zD-kwWjuCamgKezGqm9m__Gsrt7k/view?usp=sharing
 
 <h2>Links de acesso</h2>
 <h3>Deploy:</h3>
