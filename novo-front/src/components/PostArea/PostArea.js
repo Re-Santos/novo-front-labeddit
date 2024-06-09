@@ -1,3 +1,4 @@
+import React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { GradientButton, PostField } from './styled';
@@ -14,6 +15,7 @@ const PostArea = (props) => {
             const newPost = await sendPost(form, clear);
             console.log('Novo post criado:', newPost);
             props.newPost(newPost);
+            window.location.reload(); // Atualiza a página após a postagem(soluçãotemporária, para usuário desconhecido)
         } catch (error) {
             console.error('Erro ao postar:', error);
         }
