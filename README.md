@@ -15,7 +15,7 @@ https://drive.google.com/uc?id=1Tjns0D1_7finpeVVNO8-dWzQjc_APQnq&export=download
 
 <h2>Links de acesso</h2>
 <h3>Deploy:</h3>
-https://renata-labeddit.surge.sh
+https://renata-labeddit-unique.surge.sh/
 <h3>LabEddit Back-End:</h3>
 https://github.com/Re-Santos/rede-social-back-end
 
